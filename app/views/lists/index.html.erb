@@ -1,0 +1,13 @@
+<%= image_tag "popcorn.jpeg", alt: "popcorn" %>
+<h1>Hello</h1>
+<%= image_tag "movie.jpeg", alt: "cinema" %>
+<h2>Save any movie you want</h2>
+<h3>my lists</h3>
+<button>
+  <span>Create new list</span>
+</button>
+<ul>
+  <% @lists.each do |list| %>
+     <li><%= link_to list.name, list_path(list) %></li>
+  <% end %>
+</ul>
